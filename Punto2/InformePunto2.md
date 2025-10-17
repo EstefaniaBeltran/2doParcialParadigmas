@@ -1,6 +1,63 @@
 ## Punto 2 - Implementación de una Calculadora Basada en el Paradigma de Agentes
 
-### **Diseño de la Solución: Calculadora Basada en el Paradigma de Agentes**
+**1. Objetivo**: Diseñar e implementar una calculadora distribuida basada en agentes, utilizando el framework Mesa, que sea capaz de evaluar expresiones matemáticas complejas mediante la cooperación y comunicación entre diferentes agentes especializados. Cada agente tiene una función específica (suma, resta, multiplicación, división, potencia o coordinación general), y a través de un sistema de mensajería asincrónica y sincronización por ticks, se busca simular un entorno colaborativo donde las tareas se dividen, se procesan en paralelo y se integran para producir un resultado final coherente y trazable.
+
+### **2. Arquitectura general del sistema**
+
+El sistema se estructura en torno a un modelo multiagente que utiliza **Mesa** como motor de simulación.
+Está compuesto por los siguientes elementos principales:
+
+1. **Agentes Operacionales (OpAgent):**
+   Son los encargados de realizar operaciones matemáticas específicas (suma, resta, multiplicación, división y potencia). Cada tipo de operación tiene su propio agente independiente.
+   Esto permite modularidad y paralelismo, ya que distintos agentes pueden ejecutar cálculos al mismo tiempo.
+
+2. **Agente de Entrada/Salida (IOAgent):**
+   Actúa como el coordinador central del sistema. Se encarga de:
+
+   * Analizar la expresión matemática usando **AST (Abstract Syntax Tree)**.
+   * Dividirla en subexpresiones.
+   * Enviar mensajes a los agentes operacionales.
+   * Recoger los resultados y combinarlos hasta obtener la respuesta final.
+     También maneja errores (como divisiones por cero) y lleva un registro detallado del proceso mediante un sistema de trazas.
+
+3. **Modelo principal (CalcModel):**
+   Es el entorno que contiene a los agentes. Se encarga de:
+
+   * Mantener las colas de mensajes (`message_queues`).
+   * Controlar la ejecución de los agentes mediante un **scheduler discreto**.
+   * Definir cuándo se detiene la simulación.
+
+---
+
+### **3. Interacción entre los agentes**
+
+La comunicación entre agentes se realiza por medio de **mensajes asincrónicos**, donde cada agente tiene una cola de entrada independiente.
+El flujo de interacción durante la evaluación de una expresión, por ejemplo:
+
+2 + 3 \times 4 - 11⁴ / (3 + 1)
+
+ocurre de la siguiente manera:
+
+1. El **IOAgent** analiza la expresión con `ast` y crea un árbol que identifica las operaciones según su prioridad (por ejemplo, la potencia y la multiplicación se ejecutan antes que la suma o la resta).
+2. Por cada operación detectada, el IOAgent genera un **mensaje de tipo `compute`** y lo envía al agente correspondiente.
+   Ejemplo:
+
+   ```python
+   {
+     'from': 'io_agent',
+     'to': 'mul_agent',
+     'type': 'compute',
+     'request_id': 'UUID',
+     'payload': {'a': 3, 'b': 4}
+   }
+   ```
+3. El agente operacional recibe el mensaje, realiza su cálculo y responde con un mensaje `result` que contiene el valor obtenido.
+4. El IOAgent recoge las respuestas, combina los resultados parciales y continúa el proceso hasta resolver completamente la expresión.
+5. Si algún agente genera un error (por ejemplo, división entre cero), se envía un mensaje `error` al IOAgent, quien lo registra y detiene el cálculo.
+
+Todo el proceso queda documentado en las **trazas del sistema**, que muestran el orden de ejecución, el agente involucrado y el resultado parcial en cada tick del modelo.
+
+### 4. **Diseño de la Solución: Calculadora Basada en el Paradigma de Agentes**
 
 El diseño de la calculadora se basa en el **paradigma de agentes**, donde cada operación aritmética (suma, resta, multiplicación, división y potencia) es gestionada por un **agente autónomo** e independiente. La arquitectura está compuesta por un **modelo principal (CalcModel)**, un conjunto de **agentes de operación (OpAgent)** y un **agente coordinador de entrada/salida (IOAgent)**.
 
@@ -49,7 +106,7 @@ El diseño de la calculadora se basa en el **paradigma de agentes**, donde cada 
    * Simulación realista del comportamiento distribuido y cooperativo.
    * Permite observar el flujo de mensajes y la sincronización paso a paso (ticks).
 
-## Descripción de cómo funciona la comunicación entre agentes durante el cálculo de una expresión.
+## 5. Descripción de cómo funciona la comunicación entre agentes durante el cálculo de una expresión.
 ![Diagrama c1](../Imagenes/c6.png)
 
  1. `[3]` : Este número entre corchetes indica el **tick**, o sea, el **instante de tiempo dentro de la simulación**.
@@ -82,6 +139,32 @@ En este caso, fue una multiplicación (`3 * 4`) y dio `12.0`.
 Entonces aquí se está diciendo:
 
 >  “En el tick 3, el **agente de multiplicación** terminó una operación cuyo resultado fue **-3646.25**, y la operación estaba identificada con el código `c5ee3905-35ce-4e69-bbf4-59c4460f144d`.”
+
+
+### **4. Mecanismos de comunicación y sincronización**
+
+* **Mensajería asincrónica:**
+  Los agentes se comunican intercambiando mensajes dentro de las colas gestionadas por el modelo. No hay llamadas directas ni intercambio de variables, lo que imita un entorno distribuido real.
+
+* **Sincronización por ticks:**
+  El modelo ejecuta su ciclo de simulación paso a paso. En cada tick, los agentes activos procesan un mensaje, realizan sus cálculos y envían sus respuestas.
+
+* **Identificación de solicitudes (UUID):**
+  Cada solicitud de cálculo se etiqueta con un identificador único (`request_id`) para evitar confusiones entre operaciones simultáneas y garantizar la correcta correlación de respuestas.
+
+---
+
+### **6. Conclusión**
+
+El sistema multiagente diseñado logra dividir una expresión matemática compleja en operaciones más simples, distribuyéndolas entre distintos agentes que trabajan de forma coordinada.
+Esta arquitectura **demuestra los principios de cooperación, autonomía y comunicación** característicos de los sistemas multiagente.
+Además, la modularidad del diseño permite agregar fácilmente nuevos tipos de operaciones o agentes especializados en el futuro.
+
+En resumen, la calculadora multiagente implementada en Mesa representa una simulación eficiente y escalable del **trabajo colaborativo entre agentes inteligentes**, capaz de procesar expresiones como:
+
+2 + 3 \times 4 - 11⁴ / (3 + 1)
+
+siguiendo correctamente la jerarquía de operadores, gestionando errores y registrando en detalle la comunicación interna entre los distintos agentes del sistema.
 
 
 
