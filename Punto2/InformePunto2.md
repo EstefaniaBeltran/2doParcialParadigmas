@@ -41,8 +41,8 @@ El sistema está compuesto por los siguientes elementos principales:
  1. **[3]** : Este número entre corchetes indica el tick, osea el instante de tiempo dentro de la simulación.
 En MESA, cada “tick” es como un turno donde los agentes actúan.
 
->  Tick 0 → primer paso de ejecución.
->  Tick 1 → segundo paso, y así sucesivamente.
+    Tick 0 → primer paso de ejecución.
+    Tick 1 → segundo paso, y así sucesivamente.
 
 Para saber en qué orden ocurrieron las operaciones.
 
