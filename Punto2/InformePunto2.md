@@ -7,7 +7,7 @@
 
 El sistema está compuesto por los siguientes elementos principales:
 
-1. Agentes de operación (OpAgent): Son los encargados de realizar operaciones matemáticas específicas, cada tipo de operación tiene su propio agente independiente, lo cual permite modularidad y paralelismo, ya que distintos agentes pueden ejecutar cálculos al mismo tiempo.
+1. **Agentes de operación (OpAgent):** Son los encargados de realizar operaciones matemáticas específicas, cada tipo de operación tiene su propio agente independiente, lo cual permite modularidad y paralelismo, ya que distintos agentes pueden ejecutar cálculos al mismo tiempo.
 
    * add_agent → suma
    * sub_agent → resta
@@ -15,11 +15,11 @@ El sistema está compuesto por los siguientes elementos principales:
    * div_agent → división
    * pow_agent → potencia
      
-   Estos agentes funcionan de forma **reactiva**: cuando reciben un mensaje de tipo `"compute"`, realizan la operación con los operandos dados y envían el resultado de vuelta al agente que hizo la solicitud. Si ocurre un error (por ejemplo, división por cero), envían un mensaje de tipo `"error"`.
+   Estos agentes funcionan de forma reactiva: cuando reciben un mensaje de tipo `"compute"`, realizan la operación con los operandos dados y envían el resultado de vuelta al agente que hizo la solicitud. Si ocurre un error (por ejemplo, división por cero), envían un mensaje de tipo `"error"`.
 
-2. Agente coordinador de Entrada/Salida (IOAgent) : Es el coordinador principal. Su tarea es recibir la expresión del usuario (por ejemplo, 2 + 3 * 4), analizarla sintácticamente usando el módulo ast, identificar las operaciones y distribuirlas entre los agentes correspondientes.
+2. **Agente coordinador de Entrada/Salida (IOAgent) :** Es el coordinador principal. Su tarea es recibir la expresión del usuario (por ejemplo, 2 + 3 * 4), analizarla sintácticamente usando el módulo ast, identificar las operaciones y distribuirlas entre los agentes correspondientes.
    
- El IOAgent:
+   El IOAgent:
  
    * Descompone la expresión en un árbol de operaciones (AST).
    * Crea solicitudes de cálculo (compute) a los agentes apropiados.
@@ -27,12 +27,12 @@ El sistema está compuesto por los siguientes elementos principales:
    * Combina los resultados para obtener el valor final.
    * Manejar errores (como divisiones por cero) y lleva un registro detallado del proceso mediante un sistema de trazas.
 
-3. Modelo principal (CalcModel): Es el entorno donde viven y se comunican los agentes. Utiliza un scheduler (planificador) que ejecuta los pasos del modelo de manera ordenada, y un sistema de colas de mensajes (message_queues) para permitir la comunicación entre agentes. Cada “tick” del modelo representa un ciclo en el que todos los agentes procesan los mensajes que tienen pendientes. Y ademas definen cuándo se detiene la simulación.
+3. **Modelo principal (CalcModel):** Es el entorno donde viven y se comunican los agentes. Utiliza un scheduler (planificador) que ejecuta los pasos del modelo de manera ordenada, y un sistema de colas de mensajes (message_queues) para permitir la comunicación entre agentes. Cada “tick” del modelo representa un ciclo en el que todos los agentes procesan los mensajes que tienen pendientes. Y ademas definen cuándo se detiene la simulación.
 
-4. Comunicación y coordinación: La comunicación entre agentes se realiza mediante mensajes almacenados en colas (message_queues), donde cada agente tiene su propia bandeja de entrada. Cuando el IOAgent necesita un resultado, envía un mensaje a un agente de operación, y este le responde cuando termina el cálculo.
+4. **Comunicación y coordinación:** La comunicación entre agentes se realiza mediante mensajes almacenados en colas (message_queues), donde cada agente tiene su propia bandeja de entrada. Cuando el IOAgent necesita un resultado, envía un mensaje a un agente de operación, y este le responde cuando termina el cálculo.
    Esta estrategia permite que las operaciones se realicen de forma paralela y distribuida, siguiendo el principio de autonomía y colaboración entre agentes.
 
-5. Gestión de precedencia y recursividad: Gracias al uso del árbol sintáctico (ast), el IOAgent respeta automáticamente la precedencia de operadores (por ejemplo, multiplicaciones y divisiones antes de sumas y restas). Además, puede manejar expresiones complejas con paréntesis y funciones matemáticas (`sin`, `cos`, `sqrt`, etc.).
+5. **Gestión de precedencia y recursividad:** Gracias al uso del árbol sintáctico (ast), el IOAgent respeta automáticamente la precedencia de operadores (por ejemplo, multiplicaciones y divisiones antes de sumas y restas). Además, puede manejar expresiones complejas con paréntesis y funciones matemáticas (`sin`, `cos`, `sqrt`, etc.).
 
 
 ## 3. Descripción de cómo funciona la comunicación entre agentes durante el cálculo de una expresión.
@@ -55,7 +55,7 @@ Cada operación matemática que los agentes resuelven (por ejemplo, “3 * 4”)
  4. **= -3646.25** : Este es el resultado numérico que el agente calculó.
 En este caso, fue una multiplicación (3 * 4) y dio 12.0.
 
- 5. (from mul_agent): Esto indica quién hizo el cálculo:
+ 5. **(from mul_agent)**: Esto indica quién hizo el cálculo:
 
 * mul_agent → agente de multiplicación.
 * add_agent → agente de suma.
