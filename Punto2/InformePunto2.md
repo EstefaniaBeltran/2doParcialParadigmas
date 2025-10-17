@@ -83,19 +83,5 @@ Entonces aquí se está diciendo:
 
 >  “En el tick 3, el **agente de multiplicación** terminó una operación cuyo resultado fue **-3646.25**, y la operación estaba identificada con el código `c5ee3905-35ce-4e69-bbf4-59c4460f144d`.”
 
----
-
-### 💬 En palabras simples
-
-Piensa que la línea es un **mensaje de los agentes contándote lo que hicieron**:
-
-> 🧮 “Yo, el agente de multiplicar, en el paso 0 calculé 3×4 y saqué 12.”
-
-Después otro agente (por ejemplo, el de suma o resta) usa ese 12 para continuar la expresión completa.
-
----
-
-¿Quieres que te muestre un **dibujo tipo diagrama de flujo** de cómo los agentes se comunican para resolver una expresión como `2 + 3 * 4 - 5`?
-Así ves visualmente quién habla con quién y en qué orden ocurre todo 💬🔁
 
 
