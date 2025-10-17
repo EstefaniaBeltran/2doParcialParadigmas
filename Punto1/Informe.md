@@ -25,7 +25,7 @@ Este sistema se compone de agentes, cada uno de los cuales es un punto fijo en u
 - Coordenadas 2D aleatorias: x_1, x_2 
 - Etiquetas asignadas según una línea real:
   
-  ![c1.png](c1.png)
+[c1.png](..\Imagenes\c1.png)
 
 
 ### 🔸 Entrenamiento:
