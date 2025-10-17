@@ -1,4 +1,4 @@
-<img width="1070" height="649" alt="image" src="https://github.com/user-attachments/assets/ac886d73-ce9a-4a61-8502-cfc27b8aa9c6" />**Diseño de la solución**
+
  -Modelo matemático del perceptrón 
 
 ## Objetivo:  
