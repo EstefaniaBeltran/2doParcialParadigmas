@@ -27,5 +27,12 @@ python punto1_parcial.py
 4. Se abrirá una interfaz web en tu navegador (puerto 8521).
 5. Ajusta los sliders (tasa de aprendizaje, iteraciones, número de puntos) y haz clic en **"Start"**.
 
--
+## Punto 2
+⚙️ Requisitos del sistema para ejecutar este punto
+
+Para correr la calculadora basada en agentes, asegúrate de tener:
+
+Python 3.8 o superior
+
+Las siguientes bibliotecas instaladas:
 
