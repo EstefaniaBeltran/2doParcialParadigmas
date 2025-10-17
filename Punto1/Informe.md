@@ -1,4 +1,4 @@
-**Diseño de la solución**
+<img width="1070" height="649" alt="image" src="https://github.com/user-attachments/assets/ac886d73-ce9a-4a61-8502-cfc27b8aa9c6" />**Diseño de la solución**
  -Modelo matemático del perceptrón 
 
 ## Objetivo:  
@@ -69,15 +69,9 @@ Regla de actualización: Los pesos y sesgos se actualizan usando la taza de apre
 ![Diagrama c1](../Imagenes/c4.png)
 
 
+- Clasificación final
 
 
-### ✅ Clasificación final
-
-> Muestra la pantalla cuando el error promedio llegó a 0 o muy cerca, y **todos los puntos están verdes**. Idealmente, después de 30-100 steps.
-
-![Clasificación final](capturas/final.png)
-
----
 
 ## 📈 Resultados
 
