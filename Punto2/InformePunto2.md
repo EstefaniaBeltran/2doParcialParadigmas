@@ -49,3 +49,5 @@ El diseño de la calculadora se basa en el **paradigma de agentes**, donde cada 
    * Simulación realista del comportamiento distribuido y cooperativo.
    * Permite observar el flujo de mensajes y la sincronización paso a paso (ticks).
 
+## Descripción de cómo funciona la comunicación entre agentes durante el cálculo de una expresión.
+
