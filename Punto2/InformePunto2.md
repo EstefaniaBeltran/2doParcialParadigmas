@@ -52,5 +52,50 @@ El diseño de la calculadora se basa en el **paradigma de agentes**, donde cada 
 ## Descripción de cómo funciona la comunicación entre agentes durante el cálculo de una expresión.
 ![Diagrama c1](../Imagenes/c6.png)
 
+ 1. `[3]` : Este número entre corchetes indica el **tick**, o sea, el **instante de tiempo dentro de la simulación**.
+En MESA, cada “tick” es como un turno donde los agentes actúan.
+
+>  Tick 0 → primer paso de ejecución.
+>  Tick 1 → segundo paso, y así sucesivamente.
+
+Así sabes **en qué orden** ocurrieron las operaciones.
+
+ 2. `Resultado`: Esto significa que un agente **ha terminado una operación** y envía su resultado a otro agente (o al sistema de entrada/salida).
+
+ 3. `c5ee3905-35ce-4e69-bbf4-59c4460f144d` : Ese texto es un **identificador único (UUID)**.
+
+Cada operación matemática que los agentes resuelven (por ejemplo, “3 * 4”) tiene su propio identificador, para que el sistema sepa a qué cálculo pertenece ese resultado.
+
+> Es como un “número de seguimiento” del paquete (la operación).
+
+ 4. `= -3646.25 : Este es el **resultado numérico** que el agente calculó.
+En este caso, fue una multiplicación (`3 * 4`) y dio `12.0`.
+
+ 5. `(from mul_agent)`: Esto indica **quién** hizo el cálculo:
+
+* `mul_agent` → agente de multiplicación.
+* `add_agent` → agente de suma.
+* `sub_agent` → agente de resta.
+* `div_agent` → agente de división.
+* `pow_agent` → agente de potencia.
+
+Entonces aquí se está diciendo:
+
+>  “En el tick 3, el **agente de multiplicación** terminó una operación cuyo resultado fue **-3646.25**, y la operación estaba identificada con el código `c5ee3905-35ce-4e69-bbf4-59c4460f144d`.”
+
+---
+
+### 💬 En palabras simples
+
+Piensa que la línea es un **mensaje de los agentes contándote lo que hicieron**:
+
+> 🧮 “Yo, el agente de multiplicar, en el paso 0 calculé 3×4 y saqué 12.”
+
+Después otro agente (por ejemplo, el de suma o resta) usa ese 12 para continuar la expresión completa.
+
+---
+
+¿Quieres que te muestre un **dibujo tipo diagrama de flujo** de cómo los agentes se comunican para resolver una expresión como `2 + 3 * 4 - 5`?
+Así ves visualmente quién habla con quién y en qué orden ocurre todo 💬🔁
 
 
