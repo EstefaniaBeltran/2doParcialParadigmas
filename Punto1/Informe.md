@@ -4,7 +4,7 @@
 ## Objetivo:  
 Simular el entrenamiento de un perceptrón simple utilizando el paradigma de agentes en Python, mediante el framework MESA, para clasificar puntos 2D linealmente separables.
 
----
+
 
 ##  ¿Qué es un Perceptrón?
 
@@ -12,7 +12,7 @@ El perceptrón es un modelo matemático mas basico de un neurona artificial. Es 
 
 Funciona ajustando automáticamente los pesos y el sesgo de una línea de decisión en función del error cometido al clasificar los datos de entrenamiento.
 
----
+
 
 ## Implementación con MESA
 
@@ -30,12 +30,11 @@ Este sistema se compone de agentes, cada uno de los cuales es un punto fijo en u
 
 ### 🔸 Entrenamiento:
 
-- En cada step, los agentes calculan su salida con la fórmula del perceptrón.
-- Si hay error, se actualizan los pesos globales según la regla de aprendizaje.
+- En cada step, los agentes calculan su salida con la fórmula del perceptrón y si hay error, se actualizan los pesos globales según la regla de aprendizaje.
 
----
 
-## 🧮 Modelo Matemático
+
+##  Modelo Matemático
 
 El perceptrón simple calcula la salida:
 
