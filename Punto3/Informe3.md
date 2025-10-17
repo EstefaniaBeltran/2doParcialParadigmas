@@ -1,3 +1,3 @@
 ## Diseño 
 
-![Diagrama c1](../Imagenes/c6.png)
+![Diagrama c1](../Imagenes/c7.png)
