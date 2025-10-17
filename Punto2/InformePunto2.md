@@ -50,4 +50,7 @@ El diseño de la calculadora se basa en el **paradigma de agentes**, donde cada 
    * Permite observar el flujo de mensajes y la sincronización paso a paso (ticks).
 
 ## Descripción de cómo funciona la comunicación entre agentes durante el cálculo de una expresión.
+![Diagrama c1](../Imagenes/c6.png)
+
+
 
