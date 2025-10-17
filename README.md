@@ -40,7 +40,7 @@ Para ejecutar este proyecto necesitas:
 pip install mesa numpy
 ````
 
----
+
 
 **Cómo ejecutar el proyecto**
 
