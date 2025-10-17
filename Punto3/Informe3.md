@@ -17,21 +17,20 @@ Diseñar e implementar una calculadora científica en Kotlin que permita realiza
 
 * **Operaciones básicas:**
 
-  * Suma de dos números: ejemplo 5 + 4 = 12
+  * Suma de dos números: ejemplo 5 + 4 = 9
     
     ![Diagrama c1](../Imagenes/SUMA.png)
 
-  * Resta: 10 - 4 = 6
+  * Resta: 6 - 8 = -2
     
     ![Diagrama c1](../Imagenes/resta.png)
 
-  * Multiplicación: 6 * 7 = 42
+  * Multiplicación: 9 * 8 = 72
     
     ![Diagrama c1](../Imagenes/multi.png)
 
-  * División: 20 / 4 = 5
- 
-    * División por cero: muestra el mensaje de error
+  * División: 12 / 0 = Muestra el mensaje de error
+    
       
     ![Diagrama c1](../Imagenes/divi.png)
 
@@ -51,11 +50,11 @@ Diseñar e implementar una calculadora científica en Kotlin que permita realiza
     
     ![Diagrama c1](../Imagenes/tan.png)
     
-  * Potencia 2^3 = 8
+  * Potencia 2⁷  = 128
     
     ![Diagrama c1](../Imagenes/pote.png)
     
-  * Raíz cuadrada de 16 = 4
+  * Raíz cuadrada de -8 = Muestra mensaje de error
     
     ![Diagrama c1](../Imagenes/raiz.png)
     
@@ -83,37 +82,17 @@ Diseñar e implementar una calculadora científica en Kotlin que permita realiza
     ![Diagrama c1](../Imagenes/limpiar.png)
 
 
-## 4️⃣ Aplicación de POO
+## 4.  Aplicación de POO
 
-* **Encapsulamiento:**
+* **Encapsulamiento:** El atributo memoria está protegido y solo se accede mediante métodos.
 
-  * El atributo `memoria` está protegido y solo se accede mediante métodos.
-* **Herencia:**
+  
+* **Herencia:** CalculadoraCientifica hereda los métodos básicos de Calculadora y los reutiliza.
 
-  * `CalculadoraCientifica` hereda los métodos básicos de `Calculadora` y los reutiliza.
-* **Polimorfismo:**
+  
+* **Polimorfismo:** Los métodos de la clase base son open, permitiendo redefinirlos si se requiere.
 
-  * Los métodos de la clase base son `open`, permitiendo redefinirlos si se requiere.
 
----
+## 5.  Conclusión
+El proyecto demuestra cómo es posible extender una clase base para agregar funcionalidades avanzadas sin duplicar código, mostrando que la Programación Orientada a Objetos permite organizar mejor el código y facilita su mantenimiento y ampliación. Las pruebas realizadas confirman que la calculadora funciona correctamente, cubriendo operaciones básicas, científicas y manejo de memoria, mientras que el uso de Kotlin hace que el código sea conciso y legible, aprovechando las funciones nativas de la librería kotlin.math.
 
-## 5️⃣ Conclusiones
-
-* El proyecto demuestra cómo se puede **extender una clase base** para agregar funcionalidades avanzadas sin duplicar código.
-* La **POO permite organizar mejor** el código, facilitando el mantenimiento y la ampliación de la calculadora.
-* Las pruebas muestran que la calculadora funciona correctamente, cubriendo **operaciones básicas, científicas y manejo de memoria**.
-* El uso de **Kotlin** hace el código **conciso y legible**, aprovechando funciones nativas de la librería `kotlin.math`.
-
----
-
-✅ **Entrega lista:**
-
-* Solo falta **insertar el diagrama UML** y las **capturas de pantalla de la calculadora en acción**.
-
----
-
-Si quieres, puedo hacerte **el texto del informe en Word o PDF listo para entregar**, con los títulos, subtítulos y espacio para poner el UML y las capturas, así solo agregas las imágenes.
-
-¿Quieres que haga eso?
-
-## Diseño 
