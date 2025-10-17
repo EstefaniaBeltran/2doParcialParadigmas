@@ -141,7 +141,7 @@ Entonces aquí se está diciendo:
 >  “En el tick 3, el **agente de multiplicación** terminó una operación cuyo resultado fue **-3646.25**, y la operación estaba identificada con el código `c5ee3905-35ce-4e69-bbf4-59c4460f144d`.”
 
 
-### **4. Mecanismos de comunicación y sincronización**
+### **6. Mecanismos de comunicación y sincronización**
 
 * **Mensajería asincrónica:**
   Los agentes se comunican intercambiando mensajes dentro de las colas gestionadas por el modelo. No hay llamadas directas ni intercambio de variables, lo que imita un entorno distribuido real.
@@ -154,7 +154,7 @@ Entonces aquí se está diciendo:
 
 ---
 
-### **6. Conclusión**
+### **7. Conclusión**
 
 El sistema multiagente diseñado logra dividir una expresión matemática compleja en operaciones más simples, distribuyéndolas entre distintos agentes que trabajan de forma coordinada.
 Esta arquitectura **demuestra los principios de cooperación, autonomía y comunicación** característicos de los sistemas multiagente.
