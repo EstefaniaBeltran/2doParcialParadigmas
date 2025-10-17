@@ -17,7 +17,7 @@ El sistema está compuesto por los siguientes elementos principales:
    * div_agent → división
    * pow_agent → potencia
      
-   Estos agentes funcionan de forma reactiva: cuando reciben un mensaje de tipo `"compute"`, realizan la operación con los operandos dados y envían el resultado de vuelta al agente que hizo la solicitud. Si ocurre un error (por ejemplo, división por cero), envían un mensaje de tipo `"error"`.
+   Estos agentes funcionan de forma reactiva: cuando reciben un mensaje de tipo "compute", realizan la operación con los operandos dados y envían el resultado de vuelta al agente que hizo la solicitud. Si ocurre un error (por ejemplo, división por cero), envían un mensaje de tipo "error".
 
 2. **Agente coordinador de Entrada/Salida (IOAgent) :** Es el coordinador principal. Su tarea es recibir la expresión del usuario (por ejemplo, 2 + 3 * 4), analizarla sintácticamente usando el módulo ast, identificar las operaciones y distribuirlas entre los agentes correspondientes.
    
@@ -34,7 +34,7 @@ El sistema está compuesto por los siguientes elementos principales:
 4. **Comunicación y coordinación:** La comunicación entre agentes se realiza mediante mensajes almacenados en colas (message_queues), donde cada agente tiene su propia bandeja de entrada. Cuando el IOAgent necesita un resultado, envía un mensaje a un agente de operación, y este le responde cuando termina el cálculo.
    Esta estrategia permite que las operaciones se realicen de forma paralela y distribuida, siguiendo el principio de autonomía y colaboración entre agentes.
 
-5. **Gestión de precedencia y recursividad:** Gracias al uso del árbol sintáctico (ast), el IOAgent respeta automáticamente la precedencia de operadores (por ejemplo, multiplicaciones y divisiones antes de sumas y restas). Además, puede manejar expresiones complejas con paréntesis y funciones matemáticas (`sin`, `cos`, `sqrt`, etc.).
+5. **Gestión de precedencia y recursividad:** Gracias al uso del árbol sintáctico (ast), el IOAgent respeta automáticamente la precedencia de operadores (por ejemplo, multiplicaciones y divisiones antes de sumas y restas). Además, puede manejar expresiones complejas con paréntesis y funciones matemáticas (sin, cos, sqrt, etc.).
 
 
 ## 3. Descripción de cómo funciona la comunicación entre agentes durante el cálculo de una expresión.
