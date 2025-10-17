@@ -40,27 +40,8 @@ El perceptrón simple calcula la salida:
 
 ![Diagrama c1](../Imagenes/c2.png)
 
-Regla de actualización:
+Regla de actualización: Los pesos y sesgos se actualizan usando la taza de aprendizaje de n:
 
-```latex
-$$
-\text{error} = \hat{y} - y
-$$
-
-$$
-w_1 \leftarrow w_1 + \eta \cdot \text{error} \cdot x_1
-$$
-
-$$
-w_2 \leftarrow w_2 + \eta \cdot \text{error} \cdot x_2
-$$
-
-$$
-b \leftarrow b + \eta \cdot \text{error}
-$$
-```
-
----
 
 ## 📊 Visualización
 
