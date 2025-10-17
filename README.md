@@ -5,6 +5,7 @@
 ## Punto 1
 
 **Estructura del Repositorio**
+´´
 main/
 │
 ├── Imágenes/
@@ -22,7 +23,7 @@ main/
 │   └── calculadoracientifica.kt
 │
 └── README.md
-
+´´
 
 **Requisitos del sistema** 
 
