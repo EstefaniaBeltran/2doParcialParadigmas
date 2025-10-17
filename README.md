@@ -1,5 +1,28 @@
+**Yeimy Estefanía Beltrán Sandoval**
+
+## PARCIAL 2 – Paradigmas de Programación
+
 ## Punto 1
-**Recomendaciones generales**
+
+**Estructura del Repositorio**
+main/
+│
+├── Imágenes/
+│
+├── Punto1/
+│   ├── Informe.md
+│   └── punto1_parcial.py
+│
+├── Punto2/
+│   ├── InformePunto2.md
+│   └── punto2_parcial.py
+│
+├── Punto3/
+│   ├── Informe3.md
+│   └── calculadoracientifica.kt
+│
+└── README.md
+
 
 **Requisitos del sistema** 
 
