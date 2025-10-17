@@ -23,8 +23,9 @@ Este sistema se compone de agentes, cada uno de los cuales es un punto fijo en u
 ### 🔸 Entradas:
 
 - Coordenadas 2D aleatorias: x_1, x_2 
-- Etiquetas asignadas según una línea real:  
-  `label = 1 if x2 > 0.5 * x1 + 0.2 else 0`
+- Etiquetas asignadas según una línea real:
+  
+  ![cq](c1.png)
 
 
 ### 🔸 Entrenamiento:
