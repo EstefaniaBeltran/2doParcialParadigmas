@@ -71,16 +71,14 @@ Regla de actualización: Los pesos y sesgos se actualizan usando la taza de apre
 
 - Clasificación final
 
+![Diagrama c1](../Imagenes/c5.png)
 
-
-## 📈 Resultados
+##  Resultados
 
 * El perceptrón logró reducir el error promedio a cerca de 0 después de varias iteraciones.
 * La línea de decisión aprendida logró separar correctamente los puntos, validando que los datos eran linealmente separables.
 * La visualización permitió observar el proceso de aprendizaje paso a paso.
 
----
-
-## ✅ Conclusión
+##  Conclusión
 
 El modelo implementado demuestra cómo un perceptrón simple puede aprender a clasificar datos de forma efectiva. Además, la simulación basada en agentes permite visualizar el aprendizaje de manera dinámica e interactiva, facilitando la comprensión del funcionamiento interno del algoritmo.
