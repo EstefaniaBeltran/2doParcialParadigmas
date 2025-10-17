@@ -21,7 +21,7 @@ pip install mesa numpy
 3. Ejecuta el siguiente comando:
 
 ```bash
-python perceptron_model.py
+python punto1_parcial.py
 ```
 
 4. Se abrirá una interfaz web en tu navegador (puerto 8521).
