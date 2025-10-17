@@ -1,5 +1,6 @@
 ## Punto 2 - Implementación de una Calculadora Basada en el Paradigma de Agentes
 
+
 **1. Objetivo**: Diseñar e implementar una calculadora distribuida basada en agentes, utilizando el framework Mesa, que sea capaz de evaluar expresiones matemáticas complejas mediante la cooperación y comunicación entre diferentes agentes especializados. Cada agente tiene una función específica (suma, resta, multiplicación, división, potencia o coordinación general), y a través de un sistema de mensajería asincrónica y sincronización por ticks, se busca simular un entorno colaborativo donde las tareas se dividen, se procesan en paralelo y se integran para producir un resultado final coherente y trazable.
 
 ### **2. Arquitectura general del sistema y diseño de la solución**
