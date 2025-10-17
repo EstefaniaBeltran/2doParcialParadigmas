@@ -43,6 +43,9 @@ El perceptrón simple calcula la salida:
 Regla de actualización: Los pesos y sesgos se actualizan usando la taza de aprendizaje de n:
 
 
+![Diagrama c1](../Imagenes/Captura desde 2025-10-16 22-50-06.png)
+
+
 ## 📊 Visualización
 
 * **Puntos en pantalla**:
