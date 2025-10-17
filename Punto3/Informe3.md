@@ -17,28 +17,54 @@ Diseñar e implementar una calculadora científica en Kotlin que permita realiza
 
 * **Operaciones básicas:**
 
-  * Suma de dos números: ejemplo 5 + 4 = 12 
-  * Resta: 10 - 4 = 6 ✅
-  * Multiplicación: 6 * 7 = 42 ✅
-  * División: 20 / 4 = 5 ✅
-  * División por cero: muestra el mensaje de error ⚠️
+  * Suma de dos números: ejemplo 5 + 4 = 12
+    ![Diagrama c1](../Imagenes/SUMA.png)
+
+  * Resta: 10 - 4 = 6
+    ![Diagrama c1](../Imagenes/resta.png)
+
+  * Multiplicación: 6 * 7 = 42
+    ![Diagrama c1](../Imagenes/multi.png)
+
+  * División: 20 / 4 = 5
+ 
+    * División por cero: muestra el mensaje de error 
+    ![Diagrama c1](../Imagenes/divi.png)
+
+  
 
 * **Operaciones científicas:**
 
-  * Seno de 30° = 0.5 ✅
-  * Coseno de 60° = 0.5 ✅
-  * Tangente de 45° = 1 ✅
-  * Potencia 2^3 = 8 ✅
-  * Raíz cuadrada de 16 = 4 ✅
-  * Logaritmo base 10 de 100 = 2 ✅
-  * Logaritmo natural de 2 ≈ 0.693 ✅
-  * Exponencial de 1 ≈ 2.718 ✅
-  * Conversión grados→radianes y radianes→grados correcta ✅
+  * Seno de 30° = 0.5 
+  ![Diagrama c1](../Imagenes/seno.png)
+
+  * Coseno de 60° = 0.5
+    ![Diagrama c1](../Imagenes/cos.png)
+    
+  * Tangente de 45° = 1
+    ![Diagrama c1](../Imagenes/tan.png)
+    
+  * Potencia 2^3 = 8
+    ![Diagrama c1](../Imagenes/pote.png)
+    
+  * Raíz cuadrada de 16 = 4
+    ![Diagrama c1](../Imagenes/raiz.png)
+    
+  * Logaritmo base 10 de 100 = 2
+    
+    
+  * Conversión radianes→grados correcta
+    ![Diagrama c1](../Imagenes/radGrad.png)
 
 * **Funcionalidad de memoria:**
 
-  * Guardar un valor y recuperarlo ✅
-  * Limpiar memoria ✅
+  * Guardar un valor
+    
+  * Recuperar valor
+    ![Diagrama c1](../Imagenes/mostrar.png)
+    
+  * Limpiar memoria
+    ![Diagrama c1](../Imagenes/limpiar.png)
 
 
 ## 4️⃣ Aplicación de POO
