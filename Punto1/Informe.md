@@ -56,10 +56,9 @@ Regla de actualización: Los pesos y sesgos se actualizan usando la taza de apre
 * Puntos en pantalla:
 
   * Verdes: bien clasificados
-  * Naranjas: mal clasificados
-    
-* Gráfico de error: muestra la evolución del error promedio por step
-* Linea de decisión: Se dibuja de morado y se actualiza en tiempo real 
+  * Naranjas: mal clasificados   
+ * Gráfico de error: muestra la evolución del error promedio por step
+ * Linea de decisión: Se dibuja de morado y se actualiza en tiempo real
   
 
 ##  Capturas de pantalla
