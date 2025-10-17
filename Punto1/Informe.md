@@ -65,6 +65,10 @@ Regla de actualización: Los pesos y sesgos se actualizan usando la taza de apre
 ##  Capturas de pantalla
 
 - Entrenamiento del Perceptrón
+  
+![Diagrama c1](../Imagenes/c4.png)
+
+
 
 
 ### ✅ Clasificación final
