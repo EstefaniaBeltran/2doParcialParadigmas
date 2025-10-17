@@ -1,44 +1,36 @@
 **Diseño de la solución**
  -Modelo matemático del perceptrón 
 
-¡Perfecto! Aquí tienes el contenido listo en formato `.md` para que solo lo **copies y pegues** en tu archivo `README.md`. Abajo te explico **cómo y cuándo tomar las capturas** correctamente para cumplir con el entregable.
+## Objetivo:  
+Simular el entrenamiento de un perceptrón simple utilizando el paradigma de agentes en Python, mediante el framework MESA, para clasificar puntos 2D linealmente separables.
 
 ---
 
-## ✅ Contenido completo para `README.md` (solo copiar y pegar)
+##  ¿Qué es un Perceptrón?
 
-````markdown
-# 🧠 Simulación de Perceptrón con Agentes en MESA
-
----
-
-## 🎯 Objetivo
-
-Simular el entrenamiento de un **perceptrón simple** utilizando el paradigma de **agentes** en Python, mediante el framework **MESA**, para clasificar puntos 2D linealmente separables.
-
----
-
-## 🧠 ¿Qué es un Perceptrón?
-
-El perceptrón es un modelo matemático de neurona artificial propuesto por Frank Rosenblatt en 1958. Es una técnica de clasificación supervisada que determina a qué clase pertenece un punto basándose en una **función lineal**.
+El perceptrón es un modelo matemático mas basico de un neurona artificial. Es una técnica de clasificación supervisada que determina a qué clase pertenece un punto basándose en una función lineal.
 
 Funciona ajustando automáticamente los pesos y el sesgo de una línea de decisión en función del error cometido al clasificar los datos de entrenamiento.
 
 ---
 
-## 🛠️ Implementación con MESA
+## Implementación con MESA
 
 ### 🔸 Paradigma: Programación Basada en Agentes (ABM)
 
-- Cada **agente** representa un punto en el plano 2D.
-- El **modelo global** contiene los pesos del perceptrón y entrena a través de iteraciones (steps).
-- Los agentes no se mueven; su estado cambia si están bien o mal clasificados.
+Este sistema se compone de agentes, cada uno de los cuales es un punto fijo en un plano 2D. El entrenamiento se centra en un modelo global, que gestiona los pesos del perceptrón y se ajusta mediante iteraciones (steps). La posición de los agentes no cambia; su única alteración de estado ocurre cuando son clasificados correcta o incorrectamente por el modelo.
 
 ### 🔸 Entradas:
 
-- Coordenadas 2D aleatorias: \( x_1, x_2 \)
+- Coordenadas 2D aleatorias: x_1, x_2 
 - Etiquetas asignadas según una línea real:  
   `label = 1 if x2 > 0.5 * x1 + 0.2 else 0`
+  ```math
+f(x_1, x_2) = \begin{cases}
+1 & \text{si } x_2 > 0.5 \cdot x_1 + 0.2 \\
+0 & \text{en otro caso}
+\end{cases}
+```
 
 ### 🔸 Entrenamiento:
 
