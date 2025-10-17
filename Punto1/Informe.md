@@ -40,32 +40,32 @@ El perceptrón simple calcula la salida:
 
 ![Diagrama c1](../Imagenes/c2.png)
 
+Calculo de error: 
+Se calcula como la diferencia entre la etiqueta verdadera y la predicción 
+
+ error= y_real - y_predicho
+
 Regla de actualización: Los pesos y sesgos se actualizan usando la taza de aprendizaje de n:
 
 
 ![Diagrama c1](../Imagenes/c3.png)
 
 
-## 📊 Visualización
+## Visualización
 
-* **Puntos en pantalla**:
+* Puntos en pantalla:
 
   * Verdes: bien clasificados
   * Naranjas: mal clasificados
-* **Gráfico de error**: muestra la evolución del error promedio por step
-* **Frontera de decisión**: se actualiza visualmente durante el entrenamiento
+    
+* Gráfico de error: muestra la evolución del error promedio por step
+* Linea de decisión: Se dibuja de morado y se actualiza en tiempo real 
+  
 
----
+##  Capturas de pantalla
 
-## 📷 Capturas de pantalla
+- Entrenamiento del Perceptrón
 
-### 🖼️ Entrenamiento del Perceptrón
-
-> Muestra la pantalla **cuando la simulación lleva unos 10 a 30 pasos** y todavía hay varios puntos mal clasificados (de color naranja). El gráfico de error aún no ha llegado a 0.
-
-![Entrenamiento en curso](capturas/entrenamiento.png)
-
----
 
 ### ✅ Clasificación final
 
