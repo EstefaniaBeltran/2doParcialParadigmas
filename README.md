@@ -34,5 +34,12 @@ Para correr la calculadora basada en agentes, asegúrate de tener:
 
 Python 3.8 o superior
 
-Las siguientes bibliotecas instaladas:
+## Punto 3 
+Requisitos del sistema para ejecutar este punto
+
+Lenguaje y Entorno: Kotlin (versión 1.8 o superior recomendada).
+
+JDK: Java Development Kit (JDK) 17 o superior instalado y configurado en la variable de entorno PATH.
+
+IDE o Editor: Cualquier editor que soporte Kotlin, como IntelliJ IDEA, VS Code (con extensión Kotlin) o Eclipse con plugin Kotlin.
 
