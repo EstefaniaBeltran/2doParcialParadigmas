@@ -1,11 +1,8 @@
 **Diseño de la solución**
- -Modelo matemático
+ -Modelo matemático del perceptrón 
 
- ## 🧠 Modelo Matemático del Perceptrón
 
-El modelo utilizado es un **Perceptrón Simple**, que clasifica puntos en el plano según una frontera lineal.
-
-### 🔢 Función de decisión
+### Función de decisión
 
 Dado un punto \( (x_1, x_2) \), el perceptrón calcula:
 
@@ -26,7 +23,7 @@ Donde:
 
 ---
 
-### 🧮 Regla de aprendizaje
+###  Regla de aprendizaje
 
 Durante el entrenamiento, los pesos y el bias se actualizan según el error de predicción:
 
@@ -52,5 +49,5 @@ Donde:
 
 ---
 
-Este modelo es capaz de clasificar correctamente los datos siempre que sean **linealmente separables**, y fue implementado en la simulación usando el paradigma de agentes con **MESA en Python**.
+Este modelo fue implementado en la simulación.
 
