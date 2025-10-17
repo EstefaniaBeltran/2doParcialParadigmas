@@ -38,15 +38,7 @@ Este sistema se compone de agentes, cada uno de los cuales es un punto fijo en u
 
 El perceptrón simple calcula la salida:
 
-```latex
-$$
-y = 
-\begin{cases}
-1 & \text{si } w_1 x_1 + w_2 x_2 + b > 0 \\
-0 & \text{en otro caso}
-\end{cases}
-$$
-````
+![Diagrama c1](../Imagenes/c2.png)
 
 Regla de actualización:
 
