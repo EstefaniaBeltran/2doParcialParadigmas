@@ -1,5 +1,5 @@
 
- -Modelo matemático del perceptrón 
+ ## Punto 1-Modelo matemático del perceptrón 
 
 ## Objetivo:  
 Simular el entrenamiento de un perceptrón simple utilizando el paradigma de agentes en Python, mediante el framework MESA, para clasificar puntos 2D linealmente separables.
